@@ -2,7 +2,7 @@
 import type { ProfileInfoType } from "@/types/Api/ProfileInfoType";
 import { useEffect, useState } from "react";
 
-const API_URL: string = "http://127.0.1:8000/me";
+const API_URL: string = "/api/me";
 
 export function useProfileInfo() {
   const [profileInfo, setProfileInfo] = useState<ProfileInfoType>();

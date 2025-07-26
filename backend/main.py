@@ -9,7 +9,7 @@ from fastapi.responses import  RedirectResponse
 import json
 import redis
 
-app = FastAPI()
+app = FastAPI(root_path="/api")
 
 load_dotenv()
 

@@ -32,3 +32,4 @@ dist-ssr
 /backend/static/ProfileInfo.json
 
 !/backend/static/projects/*.example.json
+*.bash

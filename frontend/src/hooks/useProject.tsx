@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { type ProjectInfType } from "@/types/Api/ProjectInfoType";
 import type { SandpackFiles } from "@codesandbox/sandpack-react";
 
-const API_URL: string = "http://127.0.1:8000/";
+const API_URL: string = "/api/";
 
 export function useProjectInfo(ProjectName: string) {
   const [projectInfo, setProjectInfo] = useState<ProjectInfType>();
