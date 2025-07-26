@@ -11,7 +11,7 @@ services:
     environment:
       - REDIS_HOST=redis         
       - REDIS_PORT=6379
-      - ROJECT_PATH=/app/projects
+      - PROJECT_PATH=/app/projects
     depends_on:
       - redis                   
 
