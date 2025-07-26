@@ -1,0 +1,35 @@
+{
+  "title": "Название проекта",
+
+  "about": {
+    "ru": "Описание проекта на русском языке. ",
+    "en": "Project description in English."
+  },
+
+  "problemsInProject": {
+    "ru": "Развёрнутое описание на русском.",
+    "en": "Detailed description in English."
+  },
+
+  "stack": [
+    {
+      "title": "Название технологии (например, C)",
+      "img": "Путь к иконке технологии (например, /static/icons/IconC.svg)"
+    }
+    // Добавьте столько технологий, сколько нужно
+  ],
+
+  "type": "wasm",
+  // Допустимые значения: "web" или "wasm"
+  // Если type === "wasm", то необходимо указать поле index_wasm
+
+  "index_wasm": 0,
+  // Обязательное поле, если type === "wasm"
+  // Показывает порядковый номер или индекс wasm-приложения
+
+  "openSource": false,
+  // true — если проект доступен на GitHub или другом репозитории, false — если приватный
+
+  "preView": "/static/img/Preview_Example.png"
+  // Путь к изображению превью (скриншот проекта)
+}

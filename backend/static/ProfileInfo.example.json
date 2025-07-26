@@ -1,0 +1,53 @@
+{
+  "fullName": {
+    "ru": "ФИО на русском языке",
+    "en": "Full Name in English"
+  },
+  "link": "Ссылка на контакт (например, Telegram или Email)",
+
+  "profileLinks": [
+    {
+      "title": {
+        "ru": "Название ресурса (например, GitHub)",
+        "en": "Resource title (e.g., GitHub)"
+      },
+      "img": "Путь к иконке ресурса (например, /static/icons/IconGithub.svg)",
+      "href": "Ссылка на профиль (например, https://github.com/username)"
+    }
+  ],
+
+  "specialization": "Основная специализация, например: Web FullStack Developer",
+
+  "langs": [
+    {
+      "title": "Название языка программирования (например, Python)",
+      "img": "Путь к иконке языка"
+    }
+  ],
+
+  "stack": [
+    {
+      "title": "Технология или инструмент (например, React)",
+      "img": "Путь к иконке технологии"
+    }
+  ],
+
+  "aboutMeCards": [
+    {
+      "title": {
+        "ru": "Название секции (например, Обо мне)",
+        "en": "Section title (e.g., About Me)"
+      },
+      "text": {
+        "ru": "Развёрнутое описание на русском.",
+        "en": "Detailed description in English."
+      }
+    }
+    //"Можно указать несколько таких карточек"
+  ],
+
+  "Projects": [
+    "Путь к JSON-файлу проекта (например, static/projects/ExampleProject.json)",
+    //"Можно указать несколько таких файлов"
+  ]
+}

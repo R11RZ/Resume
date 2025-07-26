@@ -1,69 +1,45 @@
-# React + TypeScript + Vite
+# 🌐 Personal Resume web-FullStack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Это репозиторий с моим интерактивным резюме.
 
-Currently, two official plugins are available:
+## 📁 Структура проекта
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- `frontend/` — клиентская часть на **React** и **TypeScript**  
+  Содержит интерактивный интерфейс, анимации, визуальные элементы и отображение данных из JSON-файлов.
 
-## Expanding the ESLint configuration
+- `backend/` — серверная часть на **FastAPI**  
+  Может отдавать данные, поддерживать кэширование, и разворачиваться через Docker.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Запуск (dev-режим)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Frontend
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+cd frontend
+npm install
+npm run dev
+```
+### Backend
+```bash
+cd ..
+cd backend
+docker-compose up --build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# Особенности
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Данные резюме хранятся в JSON-формате (в папке static)
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Поддержка двух языков: русский и английский
+
+- Используется кэширование с помощью Redis
+
+- Возможность адаптировать проект под собственные данные
+
+# Примечания
+
+- Все статические файлы (иконки, изображения и т.д.) добавлены в .gitignore, но структура папок сохранена.
+
+- В папке static/projects/ находятся примеры проектов в виде JSON-файлов.
+
+- Данный проект можно использовать как шаблон для собственного резюме-портфолио.
