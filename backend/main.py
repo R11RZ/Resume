@@ -8,7 +8,7 @@ import json
 import redis
 from config import REDIS_HOST , REDIS_PORT , Projects_Path
 
-app = FastAPI(root_path="/api")
+app = FastAPI()
 
 
 NeedToSendSource = ["Shape_Moment" , "ComputingVesselProperty"]
@@ -20,7 +20,7 @@ app.mount("/static" , StaticFiles(directory="static") , name="static")
 
 r = redis.Redis(host=REDIS_HOST, port=REDIS_PORT, db=0, decode_responses=True)
 
-@app.get("/me")
+@app.get("/api/me")
 async def about_me():
     return RedirectResponse(PROFILE_INFO)
 
@@ -43,7 +43,7 @@ def build_project_tree(files:Path , baseDict:dict , basePath:str):
     return baseDict
 
 
-@app.get("/project/{item_id}")
+@app.get("/api/project/{item_id}")
 async def project_data(item_id: str):
 
     if item_id not in NeedToSendSource :
