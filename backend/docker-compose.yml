@@ -7,7 +7,7 @@ services:
     ports:
       - "8000:8000"               
     volumes:
-      - ./static:/app/static           
+      - /var/www/static/resume:/app/static           
     environment:
       - REDIS_HOST=redis         
       - REDIS_PORT=6379
