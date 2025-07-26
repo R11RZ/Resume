@@ -26,7 +26,6 @@ const SceneWrapper = () => {
             }}
             pages={10}
             damping={1}
-            className="no-scrollbar"
           >
             <ModelBG scale={2} position={[0, 2.5, 0]} />
 

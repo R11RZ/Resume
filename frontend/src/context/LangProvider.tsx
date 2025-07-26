@@ -1,12 +1,17 @@
 import React, { createContext, useContext, useEffect, useState , type ReactNode } from "react";
 
 
+export type LangsType = "ru" | "en"
+
 type LangContextType = {
-  lang: "ru" | 'en';
-  setLang: React.Dispatch<React.SetStateAction<string>>;
+  lang: LangsType;
+  setLang: React.Dispatch<React.SetStateAction<LangsType>>;
 }
 
-const LangContext= createContext<LangContextType | undefined>(undefined);
+const LangContext= createContext<LangContextType >(
+  {lang: "ru" , setLang: ()=>{}}
+
+);
 
 export const useLang = () => useContext(LangContext);
 
@@ -15,11 +20,14 @@ type LangProviderProps = {
 };
 
 export function LangProvider({ children }:LangProviderProps) {
-  const [lang, setLang] = useState<string>(localStorage.getItem("lang") || "");
+  const [lang, setLang] = useState<LangsType>(() => {
+    const stored = localStorage.getItem("lang");
+    return stored === "ru" || stored === "en" ? stored : "ru";
+  });
   useEffect(() => {
     if (!lang) {
       const navigator_lang:string = navigator.language || "en";
-      const target:string  = navigator_lang.startsWith("ru") ? "ru" : "en";
+      const target:LangsType  = navigator_lang.startsWith("ru") ? "ru" : "en";
       localStorage.setItem("lang", target);
       setLang(target);
       return;

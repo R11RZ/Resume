@@ -7,13 +7,19 @@ import AboutCard from "../AboutCard/AboutCard";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import { useProfileInfo } from "@/hooks/useProfileInfo";
 import { useLang } from "@/context/LangProvider";
+import { useEffect } from "react";
 
 const ScrollContent = () => {
   // lang is passed via prop drilling because Scroll_html uses a portal and doesn't inherit the current context
   const { lang } = useLang();
   const [profileInfo, error, loading] = useProfileInfo();
+
   const scroll = useScroll();
   const scrollOffset = useMotionValue(0);
+
+  useEffect(()=>{
+    console.log(error)
+  }, [error])
 
   useFrame(() => {
     scrollOffset.set(scroll.offset);
@@ -35,9 +41,9 @@ const ScrollContent = () => {
             >
               <PersonLeftPart
                 lang={lang}
-                profileLinks={profileInfo?.profileLinks}
-                fullName={profileInfo?.fullName?.[lang]}
-                link={profileInfo?.link}
+                profileLinks={profileInfo?.profileLinks || [] }
+                fullName={profileInfo?.fullName?.[lang] || ""}
+                link={profileInfo?.link || ""}
               />
             </motion.div>
             <motion.div
@@ -48,9 +54,9 @@ const ScrollContent = () => {
             >
               <PersonRightPart
                 lang={lang}
-                specialization={profileInfo?.specialization}
-                langs={profileInfo?.langs}
-                stack={profileInfo?.stack}
+                specialization={profileInfo?.specialization || ""}
+                langs={profileInfo?.langs || []}
+                stack={profileInfo?.stack || []}
               />
             </motion.div>
           </div>

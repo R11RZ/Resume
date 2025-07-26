@@ -15,9 +15,8 @@ export function ModelBG(props: ModelBGProps) {
   const { scene, animations, cameras } = useGLTF(ModelPath);
   const { actions } = useAnimations(animations, scene);
   const { set } = useThree();
-  const cameraAction = useRef(null);
+  const cameraAction = useRef<THREE.AnimationAction>(null);
 
-  // Запускаем нужные анимации
   useEffect(() => {
     actions["Earth|EarthAction"]?.play();
 
@@ -29,17 +28,17 @@ export function ModelBG(props: ModelBGProps) {
     }
   }, [actions]);
 
-  // Заменяем камеру сценой
   useEffect(() => {
     if (cameras && cameras.length > 0) {
-      const gltfCamera = cameras[0];
-      gltfCamera.aspect = window.innerWidth / window.innerHeight;
-      gltfCamera.updateProjectionMatrix();
-      set({ camera: gltfCamera });
+      const cam = cameras[0];
+      if (cam instanceof THREE.PerspectiveCamera) {
+        cam.aspect = window.innerWidth / window.innerHeight;
+        cam.updateProjectionMatrix();
+        set({ camera: cam });
+      }
     }
   }, [cameras, set]);
 
-  // Прокручиваем анимацию камеры по скроллу
   useFrame((_, delta) => {
     const action = cameraAction.current;
     if (action) {

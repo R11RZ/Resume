@@ -1,4 +1,5 @@
-import MyRaylibModule from "./index.js";
+// @ts-ignore
+import MyRaylibModule from "@/components/WasmCanvas/VesselsProjectCanvas/index.js";
 import { useEffect, useRef } from "react";
 
 type EmscriptenModule = {
@@ -23,7 +24,7 @@ export default function VesselsProjectCanvas() {
       MyRaylibModule({
         canvas,
         locateFile: (file: string) => `/wasm/${file}`,
-      }as EmscriptenModule).then((Module) => {
+      }as EmscriptenModule).then((Module: any) => {
         console.log("WASM loaded!", Module);
       });
     };

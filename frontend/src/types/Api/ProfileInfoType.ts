@@ -21,7 +21,7 @@ type Lang = {
   img: string;
 }
 
-type ProfileLink = {
+export type ProfileLink = {
   title: MultyLangStringType;
   img: string;
   href: string;

@@ -1,11 +1,10 @@
-import { useRef, type PropsWithChildren } from "react";
+import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 type AboutCardProps = {
   title: string;
   text: string;
   index: number;
-  props: PropsWithChildren;
 };
 
 const AboutCard = ({ title, text, index, ...props }: AboutCardProps) => {

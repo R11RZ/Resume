@@ -6,13 +6,13 @@ import { ThemeProvider } from "./context/ThemeProvider";
 import { useProfileInfo } from "./hooks/useProfileInfo";
 
 function App() {
-  const [profileInfo, error, loading] = useProfileInfo();
+  const [profileInfo] = useProfileInfo();
 
   return (
     <>
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
         <LangProvider>
-          <Overlay link={profileInfo?.link} />
+          <Overlay link={profileInfo?.link ?? "#"} />
           <SceneWrapper  />
 
         </LangProvider>

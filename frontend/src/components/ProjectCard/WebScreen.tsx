@@ -11,8 +11,8 @@ type WebScreenProps = {
   openSource: boolean;
 };
 
-const WebScreen = ({ projectName , openSource }: WebScreenProps) => {
-  const [projectDemoData, error_demo] = useProjectDemo(projectName);
+const WebScreen = ({ projectName  }: WebScreenProps) => {
+  const [projectDemoData] = useProjectDemo(projectName);
   return (
     <>
       {projectDemoData && (

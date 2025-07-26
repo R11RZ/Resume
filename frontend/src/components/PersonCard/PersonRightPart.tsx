@@ -1,3 +1,4 @@
+import type { LangsType } from "@/context/LangProvider";
 import TechCard from "../TechCard/TechCard";
 
 type TechCard = {
@@ -7,7 +8,7 @@ type TechCard = {
 
 type PersonRightPartProps = {
   specialization: string;
-  lang:string;
+  lang:LangsType;
   langs: TechCard[];
   stack: TechCard[];
 };

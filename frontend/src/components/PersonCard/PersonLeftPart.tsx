@@ -1,11 +1,13 @@
+import type { ProfileLink } from "@/types/Api/ProfileInfoType";
 import LinkCard from "../LinkCard/LinkCard";
+import type { LangsType } from "@/context/LangProvider";
 
 
 type PersonLeftPartProps = {
   fullName: string;
   link: string;
-  profileLinks : object[];
-  lang: string;
+  profileLinks : ProfileLink[];
+  lang: LangsType;
 };
 
 const PersonLeftPart = ({ fullName, link , profileLinks , lang}: PersonLeftPartProps) => {
@@ -20,8 +22,8 @@ const PersonLeftPart = ({ fullName, link , profileLinks , lang}: PersonLeftPartP
       {fullName}
     </a>
     <div className="flex flex-wrap w-full justify-center items-center">
-    {profileLinks?.map((ele , index)=>(
-      <LinkCard href={ele?.href}  title={ele?.title?.[lang]} img={ele?.img}  />
+    {profileLinks?.map((ele:ProfileLink , index)=>(
+      <LinkCard key={index} href={ele.href}  title={ele.title[lang]} img={ele?.img}  />
     ))}
     </div>
     </div>
