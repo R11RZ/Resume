@@ -23,6 +23,9 @@ dist-ssr
 *.sln
 *.sw?
 
+kirill-starkov.ru
+shape-moment.ru
+shape-moment.online
 
 /backend/projects/*
 .env
