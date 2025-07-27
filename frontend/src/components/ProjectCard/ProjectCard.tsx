@@ -8,11 +8,10 @@ import TechCard from "../TechCard/TechCard";
 import WebScreen from "./WebScreen";
 import WasmSceen from "./WasmSceen";
 import LinkCard from "../LinkCard/LinkCard";
-import type { LangsType } from "@/context/LangProvider";
+import { useLang } from "@/context/LangProvider";
 
 type ProjectCardProps = {
   projectName: string;
-  lang: LangsType;
 };
 
 const text = {
@@ -30,7 +29,9 @@ const text = {
   },
 };
 
-const ProjectCard = ({ projectName, lang }: ProjectCardProps) => {
+const ProjectCard = ({ projectName }: ProjectCardProps) => {
+  const { lang } = useLang();
+    
   const [needShowDemo, setNeedShowDemo] = useState<boolean>(false);
   const [projectInfo] = useProjectInfo(projectName);
 

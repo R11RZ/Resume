@@ -7,7 +7,7 @@ services:
     ports:
       - "8000:8000"               
     volumes:
-      - ./projects/:/app/projects       
+      - ./projects/:/app/projects
     environment:
       - REDIS_HOST=redis         
       - REDIS_PORT=6379
