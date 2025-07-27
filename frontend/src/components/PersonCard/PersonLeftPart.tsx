@@ -21,7 +21,7 @@ const PersonLeftPart = ({ fullName, link , profileLinks , lang}: PersonLeftPartP
     >
       {fullName}
     </a>
-    <div className="flex flex-wrap w-full justify-center items-center">
+    <div className="flex flex-col gap-5 w-full justify-center items-center">
     {profileLinks?.map((ele:ProfileLink , index)=>(
       <LinkCard key={index} href={ele.href}  title={ele.title[lang]} img={ele?.img}  />
     ))}

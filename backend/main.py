@@ -13,7 +13,7 @@ app = FastAPI(root_path="/api")
 
 NeedToSendSource = ["Shape_Moment" , "ComputingVesselProperty"]
 
-PROFILE_INFO = Path("/api/static/ProfileInfo.json")
+PROFILE_INFO = Path("/static/ProfileInfo.json")
 
 
 

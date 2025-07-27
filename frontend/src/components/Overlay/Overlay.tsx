@@ -12,7 +12,7 @@ const textBtn = {
 const Overlay = ({ link }: HeaderProps) => {
   const { lang, setLang } = useLang();
   return (
-    <div className="fixed  pointer-events-none w-screen h-screen items-center sm:items-end md:items-end lg:items-end   z-20 p-5 flex justify-between flex-col   ">
+    <div className="fixed  pointer-events-none w-screen h-[100dvh] items-center sm:items-end md:items-end lg:items-end   z-20 p-5 flex justify-between flex-col   ">
       <div className="">
         <ToggleGroup
           className="shadow-card pointer-events-auto w-[100px]"

@@ -34,5 +34,11 @@ shape-moment.online
 /backend/static/projects/*
 /backend/static/ProfileInfo.json
 
-!/backend/static/projects/*.example.json
+/frontend/public/static/icons/*
+/frontend/public/static/img/*
+/frontend/public/static/projects/*
+/frontend/public/static/ProfileInfo.json
+
+
+!/frontend/public/static/projects/*.example.json
 *.bash

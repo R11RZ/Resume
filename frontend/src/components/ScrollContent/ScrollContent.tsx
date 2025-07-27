@@ -32,7 +32,7 @@ const ScrollContent = () => {
     <Scroll html>
       {!loading && (
         <div className="flex flex-col w-screen">
-          <div className=" w-full min-h-screen flex flex-wrap items-center justify-center">
+          <div className=" w-full min-h-screen flex flex-wrap mt-[40px] items-center justify-center">
             <motion.div
               style={{
                 x: leftPersonX,

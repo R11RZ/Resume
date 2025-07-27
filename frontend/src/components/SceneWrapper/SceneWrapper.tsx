@@ -1,4 +1,5 @@
 import {
+  Loader,
   ScrollControls,
 } from "@react-three/drei";
 import { Canvas,  } from "@react-three/fiber";
@@ -6,6 +7,7 @@ import { Suspense, } from "react";
 import "./SceneWrapper.css";
 import ScrollContent from "../ScrollContent/ScrollContent";
 import { ModelBG } from "./ModelBG";
+
 
 
 
@@ -24,7 +26,7 @@ const SceneWrapper = () => {
               scrollbarWidth: "none",
               msOverflowStyle: "none",
             }}
-            pages={10}
+            pages={20}
             damping={1}
           >
             <ModelBG scale={2} position={[0, 2.5, 0]} />
@@ -33,6 +35,7 @@ const SceneWrapper = () => {
         </ScrollControls>
         </Suspense>
       </Canvas>
+      <Loader />
     </div>
   );
 };

@@ -30,7 +30,7 @@ var ENVIRONMENT_IS_SHELL = false;
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: C:\Users\alpak\AppData\Local\Temp\tmpvo8ev9mh.js
+// include: C:\Users\alpak\AppData\Local\Temp\tmpt57rhkwh.js
 
   Module['expectedDataFileDownloads'] ??= 0;
   Module['expectedDataFileDownloads']++;
@@ -197,25 +197,25 @@ Module['FS_createPath']("/", "assets", true, true);
     }
 
     }
-    loadPackage({"files": [{"filename": "/assets/temp.msh", "start": 0, "end": 12064}], "remote_package_size": 12064});
+    loadPackage({"files": [{"filename": "/assets/cube.msh", "start": 0, "end": 12064}, {"filename": "/assets/sphere.msh", "start": 12064, "end": 129938}, {"filename": "/assets/tube.msh", "start": 129938, "end": 180988}], "remote_package_size": 180988});
 
   })();
 
-// end include: C:\Users\alpak\AppData\Local\Temp\tmpvo8ev9mh.js
-// include: C:\Users\alpak\AppData\Local\Temp\tmp1m3sirjf.js
+// end include: C:\Users\alpak\AppData\Local\Temp\tmpt57rhkwh.js
+// include: C:\Users\alpak\AppData\Local\Temp\tmplsgbu2tf.js
 
     // All the pre-js content up to here must remain later on, we need to run
     // it.
     if ((typeof ENVIRONMENT_IS_WASM_WORKER != 'undefined' && ENVIRONMENT_IS_WASM_WORKER) || (typeof ENVIRONMENT_IS_PTHREAD != 'undefined' && ENVIRONMENT_IS_PTHREAD) || (typeof ENVIRONMENT_IS_AUDIO_WORKLET != 'undefined' && ENVIRONMENT_IS_AUDIO_WORKLET)) Module['preRun'] = [];
     var necessaryPreJSTasks = Module['preRun'].slice();
-  // end include: C:\Users\alpak\AppData\Local\Temp\tmp1m3sirjf.js
-// include: C:\Users\alpak\AppData\Local\Temp\tmpnsjdzqnx.js
+  // end include: C:\Users\alpak\AppData\Local\Temp\tmplsgbu2tf.js
+// include: C:\Users\alpak\AppData\Local\Temp\tmp96fem1og.js
 
     if (!Module['preRun']) throw 'Module.preRun should exist because file support used it; did a pre-js delete it?';
     necessaryPreJSTasks.forEach((task) => {
       if (Module['preRun'].indexOf(task) < 0) throw 'All preRun tasks that exist before user pre-js code should remain after; did you replace Module or modify Module.preRun?';
     });
-  // end include: C:\Users\alpak\AppData\Local\Temp\tmpnsjdzqnx.js
+  // end include: C:\Users\alpak\AppData\Local\Temp\tmp96fem1og.js
 
 
 var arguments_ = [];
@@ -9944,49 +9944,49 @@ function checkIncomingModuleAPI() {
   ignoredModuleProp('fetchSettings');
 }
 var ASM_CONSTS = {
-  67168504: () => { if (document.fullscreenElement) return 1; },  
- 67168550: () => { return Module.canvas.width; },  
- 67168582: () => { return parseInt(Module.canvas.style.width); },  
- 67168630: () => { document.exitFullscreen(); },  
- 67168657: () => { setTimeout(function() { Module.requestFullscreen(false, false); }, 100); },  
- 67168730: () => { if (document.fullscreenElement) return 1; },  
- 67168776: () => { return Module.canvas.width; },  
- 67168808: () => { return screen.width; },  
- 67168833: () => { document.exitFullscreen(); },  
- 67168860: () => { setTimeout(function() { Module.requestFullscreen(false, true); setTimeout(function() { canvas.style.width="unset"; }, 100); }, 100); },  
- 67168993: () => { return window.innerWidth; },  
- 67169019: () => { return window.innerHeight; },  
- 67169046: () => { if (document.fullscreenElement) return 1; },  
- 67169092: () => { return Module.canvas.width; },  
- 67169124: () => { return parseInt(Module.canvas.style.width); },  
- 67169172: () => { if (document.fullscreenElement) return 1; },  
- 67169218: () => { return Module.canvas.width; },  
- 67169250: () => { return screen.width; },  
- 67169275: () => { return window.innerWidth; },  
- 67169301: () => { return window.innerHeight; },  
- 67169328: () => { if (document.fullscreenElement) return 1; },  
- 67169374: () => { return Module.canvas.width; },  
- 67169406: () => { return screen.width; },  
- 67169431: () => { document.exitFullscreen(); },  
- 67169458: () => { if (document.fullscreenElement) return 1; },  
- 67169504: () => { return Module.canvas.width; },  
- 67169536: () => { return parseInt(Module.canvas.style.width); },  
- 67169584: () => { document.exitFullscreen(); },  
- 67169611: ($0) => { Module.canvas.style.opacity = $0; },  
- 67169649: () => { return screen.width; },  
- 67169674: () => { return screen.height; },  
- 67169700: () => { return window.screenX; },  
- 67169727: () => { return window.screenY; },  
- 67169754: () => { return window.devicePixelRatio; },  
- 67169790: ($0) => { navigator.clipboard.writeText(UTF8ToString($0)); },  
- 67169843: ($0) => { Module.canvas.style.cursor = UTF8ToString($0); },  
- 67169894: () => { Module.canvas.style.cursor = 'none'; },  
- 67169931: ($0, $1, $2, $3) => { try { navigator.getGamepads()[$0].vibrationActuator.playEffect('dual-rumble', { startDelay: 0, duration: $3, weakMagnitude: $1, strongMagnitude: $2 }); } catch (e) { try { navigator.getGamepads()[$0].hapticActuators[0].pulse($2, $3); } catch (e) { } } },  
- 67170187: ($0) => { Module.canvas.style.cursor = UTF8ToString($0); },  
- 67170238: () => { if (document.fullscreenElement) return 1; },  
- 67170284: () => { return window.innerWidth; },  
- 67170310: () => { return window.innerHeight; },  
- 67170337: () => { if (document.pointerLockElement) return 1; }
+  67168536: () => { if (document.fullscreenElement) return 1; },  
+ 67168582: () => { return Module.canvas.width; },  
+ 67168614: () => { return parseInt(Module.canvas.style.width); },  
+ 67168662: () => { document.exitFullscreen(); },  
+ 67168689: () => { setTimeout(function() { Module.requestFullscreen(false, false); }, 100); },  
+ 67168762: () => { if (document.fullscreenElement) return 1; },  
+ 67168808: () => { return Module.canvas.width; },  
+ 67168840: () => { return screen.width; },  
+ 67168865: () => { document.exitFullscreen(); },  
+ 67168892: () => { setTimeout(function() { Module.requestFullscreen(false, true); setTimeout(function() { canvas.style.width="unset"; }, 100); }, 100); },  
+ 67169025: () => { return window.innerWidth; },  
+ 67169051: () => { return window.innerHeight; },  
+ 67169078: () => { if (document.fullscreenElement) return 1; },  
+ 67169124: () => { return Module.canvas.width; },  
+ 67169156: () => { return parseInt(Module.canvas.style.width); },  
+ 67169204: () => { if (document.fullscreenElement) return 1; },  
+ 67169250: () => { return Module.canvas.width; },  
+ 67169282: () => { return screen.width; },  
+ 67169307: () => { return window.innerWidth; },  
+ 67169333: () => { return window.innerHeight; },  
+ 67169360: () => { if (document.fullscreenElement) return 1; },  
+ 67169406: () => { return Module.canvas.width; },  
+ 67169438: () => { return screen.width; },  
+ 67169463: () => { document.exitFullscreen(); },  
+ 67169490: () => { if (document.fullscreenElement) return 1; },  
+ 67169536: () => { return Module.canvas.width; },  
+ 67169568: () => { return parseInt(Module.canvas.style.width); },  
+ 67169616: () => { document.exitFullscreen(); },  
+ 67169643: ($0) => { Module.canvas.style.opacity = $0; },  
+ 67169681: () => { return screen.width; },  
+ 67169706: () => { return screen.height; },  
+ 67169732: () => { return window.screenX; },  
+ 67169759: () => { return window.screenY; },  
+ 67169786: () => { return window.devicePixelRatio; },  
+ 67169822: ($0) => { navigator.clipboard.writeText(UTF8ToString($0)); },  
+ 67169875: ($0) => { Module.canvas.style.cursor = UTF8ToString($0); },  
+ 67169926: () => { Module.canvas.style.cursor = 'none'; },  
+ 67169963: ($0, $1, $2, $3) => { try { navigator.getGamepads()[$0].vibrationActuator.playEffect('dual-rumble', { startDelay: 0, duration: $3, weakMagnitude: $1, strongMagnitude: $2 }); } catch (e) { try { navigator.getGamepads()[$0].hapticActuators[0].pulse($2, $3); } catch (e) { } } },  
+ 67170219: ($0) => { Module.canvas.style.cursor = UTF8ToString($0); },  
+ 67170270: () => { if (document.fullscreenElement) return 1; },  
+ 67170316: () => { return window.innerWidth; },  
+ 67170342: () => { return window.innerHeight; },  
+ 67170369: () => { if (document.pointerLockElement) return 1; }
 };
 function GetCanvasIdJs() { var canvasId = "#" + Module.canvas.id; var lengthBytes = lengthBytesUTF8(canvasId) + 1; var stringOnWasmHeap = _malloc(lengthBytes); stringToUTF8(canvasId, stringOnWasmHeap, lengthBytes); return stringOnWasmHeap; }
 
