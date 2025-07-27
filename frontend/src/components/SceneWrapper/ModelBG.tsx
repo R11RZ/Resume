@@ -1,7 +1,7 @@
-import { useGLTF, useScroll, useAnimations } from "@react-three/drei";
-import { useFrame, useThree } from "@react-three/fiber";
+import { useGLTF,  useAnimations } from "@react-three/drei";
+import { useThree } from "@react-three/fiber";
 import * as THREE from "three";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 type ModelBGProps = {
   scale: number;
@@ -11,21 +11,12 @@ type ModelBGProps = {
 const ModelPath = "/models/low_earth.glb";
 
 export function ModelBG(props: ModelBGProps) {
-  const scroll = useScroll();
   const { scene, animations, cameras } = useGLTF(ModelPath);
   const { actions } = useAnimations(animations, scene);
   const { set } = useThree();
-  const cameraAction = useRef<THREE.AnimationAction>(null);
 
   useEffect(() => {
     actions["Earth|Earth|IcosphereAction"]?.play();
-
-    if (actions["CameraAction"]) {
-      const action = actions["CameraAction"];
-      action.play();
-      action.paused = true;
-      cameraAction.current = action;
-    }
   }, [actions]);
 
   useEffect(() => {
@@ -39,14 +30,6 @@ export function ModelBG(props: ModelBGProps) {
     }
   }, [cameras, set]);
 
-  useFrame((_, delta) => {
-    const action = cameraAction.current;
-    if (action) {
-      const duration = action.getClip().duration;
-      const targetTime = duration * scroll.offset;
-      action.time = THREE.MathUtils.damp(action.time, targetTime, 8, delta);
-    }
-  });
 
   return <primitive object={scene} {...props} />;
 }
