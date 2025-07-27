@@ -1,7 +1,7 @@
 from pathlib import Path
 
 import base64
-from fastapi import FastAPI, HTTPException , status 
+from fastapi import FastAPI, HTTPException , status
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import  RedirectResponse
 import json
@@ -16,7 +16,6 @@ NeedToSendSource = ["Shape_Moment" , "ComputingVesselProperty"]
 PROFILE_INFO = Path("/api/static/ProfileInfo.json")
 
 
-app.mount("/static" , StaticFiles(directory="static") , name="static")
 
 r = redis.Redis(host=REDIS_HOST, port=REDIS_PORT, db=0, decode_responses=True)
 

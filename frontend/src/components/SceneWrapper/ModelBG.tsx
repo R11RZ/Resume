@@ -8,7 +8,7 @@ type ModelBGProps = {
   position: number[];
 };
 
-const ModelPath = "/models/earth.glb";
+const ModelPath = "/models/low_earth.glb";
 
 export function ModelBG(props: ModelBGProps) {
   const scroll = useScroll();
@@ -18,7 +18,7 @@ export function ModelBG(props: ModelBGProps) {
   const cameraAction = useRef<THREE.AnimationAction>(null);
 
   useEffect(() => {
-    actions["Earth|EarthAction"]?.play();
+    actions["Earth|Earth|IcosphereAction"]?.play();
 
     if (actions["CameraAction"]) {
       const action = actions["CameraAction"];
